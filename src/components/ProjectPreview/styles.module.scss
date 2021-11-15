@@ -1,0 +1,42 @@
+@import "../../assets/colors";
+
+.mainDiv {
+  border-left-width: 10px;
+  border-left-style: solid;
+  border-left-color: $BLUE_300;
+  transition: all 0.3s linear;
+  width: 100%;
+  max-width: 800px;
+  min-height: 80px;
+
+  background-color: rgba(255, 255, 255, 0);
+
+  &:hover {
+    //border-left-width: 10px;
+    background-color: white;
+    border-left-color: $BLUE_500;
+  }
+
+  display: flex;
+  padding: 10px 18px;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+  flex-direction: row;
+}
+
+.infoDiv {
+  height: 100%;
+  flex: 0.75;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+  //background-color: #58FFB8;
+}
+
+.buttonDiv {
+  flex: 0.1;
+  display: flex;
+
+}

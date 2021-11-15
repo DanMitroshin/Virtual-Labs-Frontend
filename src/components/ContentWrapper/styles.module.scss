@@ -1,0 +1,147 @@
+@import "../../assets/constants";
+@import "../../assets/colors";
+@import "../../assets/fonts";
+
+.content_main {
+  min-height: 100vh;
+  //height: 100%;
+  background-color: $BACKGROUND_COLOR;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  //padding-top: $header_height;
+  //padding-bottom: 0;
+}
+
+.content {
+  //box-sizing: border-box;
+  //height: 100%;
+  //margin-top: $header_height;
+  //margin-left: 5px;
+  //margin-right: 5px;
+  //background-color: $color_black;
+
+  /*min-width: 100vm;*/
+  //padding: 70px 180px;
+
+  //background: linear-gradient(#ffffed, #DEFFFF);//#FFEEC4) //#FFF6F9;//#f0f5f6;
+}
+
+.content_without_header {
+  margin-top: 0;
+}
+
+.error {
+  color: $RED_500;
+  font-size: 14px;
+  min-height: 60px;
+}
+
+.head_form {
+  font-family: $openSans;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+
+.request_error_block {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: column;
+  bottom: 30px;
+  right: 30px;
+  z-index: 100500;
+}
+
+.request_error {
+  min-height: 35px;
+  width: 200px;
+  border-radius: 20px;
+  margin-top: 10px;
+  background-color: rgba(252, 143, 143, 0.7);
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 12px 8px 12px 15px;
+  font-family: $openSans;
+  font-size: 16px;
+}
+
+.green_notification {
+  background-color: rgba(0, 143, 50, 0.5);
+}
+
+.request_error_time {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  //padding: 4px 4px 4px 10px;
+  font-family: $openSans;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+
+
+.change {
+  text-decoration:none;
+}
+
+.date {
+  color: #111;
+  display: block;
+  font-family: ‘Open Sans’, sans-serif;
+  font-size: 16px;
+  position: relative;
+  text-align: center;
+  z-index: 1;
+
+  &:before {
+    border-top: 1px solid #111;
+    content: "";
+    position: absolute;
+    top: 12px;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+  }
+}
+
+.author {
+  color: #111;
+  display: block;
+  font-family: ‘Open Sans’, sans-serif;
+  font-size: 16px;
+  padding-bottom: 38px;
+  position: relative;
+  background: none;
+  text-align: center;
+  z-index: 1;
+  content: "";
+  &:before {
+    border-top: 1px solid #111;
+    content: "";
+    position: absolute;
+    top: 12px;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+  }
+}
+
+.date span, .author span {
+  background: #fdfdfd;
+  padding: 0 10px;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 768px) {
+  .content {
+    //padding: 45px 40px;
+  }
+}
+
