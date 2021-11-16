@@ -45,14 +45,15 @@ function ProjectsPage({history}) {
         <h1>Список проектов</h1>
         <div className={styles.projectsList}>
             {projects.map((item, index) => (
-                <div className={styles.projectWrapper}>
-                <ProjectPreview
-                    key={index.toString()}
-                    title={item.title}
-                    description={item.description}
-                    name={item.name}
-                    onClick={onDetail}
-                />
+                <div className={styles.projectWrapper}
+                     key={index.toString()}
+                >
+                    <ProjectPreview
+                        title={item.title}
+                        description={item.description}
+                        name={item.name}
+                        onClick={onDetail}
+                    />
                 </div>
             ))}
         </div>

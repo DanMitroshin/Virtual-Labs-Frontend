@@ -15,7 +15,7 @@ const MainRouter = () => {
                 <Route exact path={MAIN_URL.PROJECTS_LIST.EXAMPLE}
                        component={ExampleProject}/>
 
-                <Redirect to={MAIN_URL.BLOCK_1}/>
+                <Redirect to={MAIN_URL.PROJECTS}/>
         </Switch>
 };
 

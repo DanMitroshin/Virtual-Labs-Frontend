@@ -19,6 +19,14 @@
   justify-content: center;
 }
 
+@media (max-width: 600px) {
+  .mainDiv {
+    padding-top: 1rem;
+    padding-left: 0.3rem;
+    padding-right: 0.3rem;
+  }
+}
+
 .mainDiv::-webkit-scrollbar {
   width: 7px;
   height: 7px;
