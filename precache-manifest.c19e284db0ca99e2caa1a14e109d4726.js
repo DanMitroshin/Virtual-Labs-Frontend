@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "073b6d0831cae644f5bc508a469f24cf",
+    "revision": "b4e43200c7a84f5f1ff4f6868bf078e5",
     "url": "/Virtual-Labs-Frontend/index.html"
   },
   {
-    "revision": "171f169fe6ca11f42488",
-    "url": "/Virtual-Labs-Frontend/static/css/main.acf15749.chunk.css"
+    "revision": "67b6ea77c95188478e1e",
+    "url": "/Virtual-Labs-Frontend/static/css/main.e5ad3085.chunk.css"
   },
   {
     "revision": "e9fa517431f9e76d1bde",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Virtual-Labs-Frontend/static/js/2.e900e37e.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "171f169fe6ca11f42488",
-    "url": "/Virtual-Labs-Frontend/static/js/main.061b4199.chunk.js"
+    "revision": "67b6ea77c95188478e1e",
+    "url": "/Virtual-Labs-Frontend/static/js/main.9168a59e.chunk.js"
   },
   {
     "revision": "9f3d67813055fcf08af7",

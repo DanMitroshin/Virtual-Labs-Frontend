@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/Virtual-Labs-Frontend/static/css/main.acf15749.chunk.css",
-    "main.js": "/Virtual-Labs-Frontend/static/js/main.061b4199.chunk.js",
-    "main.js.map": "/Virtual-Labs-Frontend/static/js/main.061b4199.chunk.js.map",
+    "main.css": "/Virtual-Labs-Frontend/static/css/main.e5ad3085.chunk.css",
+    "main.js": "/Virtual-Labs-Frontend/static/js/main.9168a59e.chunk.js",
+    "main.js.map": "/Virtual-Labs-Frontend/static/js/main.9168a59e.chunk.js.map",
     "runtime-main.js": "/Virtual-Labs-Frontend/static/js/runtime-main.17726735.js",
     "runtime-main.js.map": "/Virtual-Labs-Frontend/static/js/runtime-main.17726735.js.map",
     "static/js/2.e900e37e.chunk.js": "/Virtual-Labs-Frontend/static/js/2.e900e37e.chunk.js",
     "static/js/2.e900e37e.chunk.js.map": "/Virtual-Labs-Frontend/static/js/2.e900e37e.chunk.js.map",
     "index.html": "/Virtual-Labs-Frontend/index.html",
-    "precache-manifest.34f864434553c096e62753adb36e17fa.js": "/Virtual-Labs-Frontend/precache-manifest.34f864434553c096e62753adb36e17fa.js",
+    "precache-manifest.c19e284db0ca99e2caa1a14e109d4726.js": "/Virtual-Labs-Frontend/precache-manifest.c19e284db0ca99e2caa1a14e109d4726.js",
     "service-worker.js": "/Virtual-Labs-Frontend/service-worker.js",
-    "static/css/main.acf15749.chunk.css.map": "/Virtual-Labs-Frontend/static/css/main.acf15749.chunk.css.map",
+    "static/css/main.e5ad3085.chunk.css.map": "/Virtual-Labs-Frontend/static/css/main.e5ad3085.chunk.css.map",
     "static/js/2.e900e37e.chunk.js.LICENSE.txt": "/Virtual-Labs-Frontend/static/js/2.e900e37e.chunk.js.LICENSE.txt",
     "static/media/index.css": "/Virtual-Labs-Frontend/static/media/Circe-Thin.d9851189.eot"
   },
   "entrypoints": [
     "static/js/runtime-main.17726735.js",
     "static/js/2.e900e37e.chunk.js",
-    "static/css/main.acf15749.chunk.css",
-    "static/js/main.061b4199.chunk.js"
+    "static/css/main.e5ad3085.chunk.css",
+    "static/js/main.9168a59e.chunk.js"
   ]
 }
