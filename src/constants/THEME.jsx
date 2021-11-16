@@ -12,6 +12,7 @@ export const THEME = {
     BLUE_400: "#534ED9",
     BLUE_300: "#7673D9",
     BLUE_200: "#C8D4F2",
+    BLUE_100: "#e8eeff",
 
     PURPLE_500: "#AD009F",
     PURPLE_400: "#D636C9",

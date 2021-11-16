@@ -148,7 +148,9 @@ function ContentWrapper({history, children}) {
     //console.log("Type content children:", typeof children)
 
     return <div className={styles.content_main}>
-        {/*<Header onClick={ChangePage}/>*/}
+        <Header onClick={ChangePage}>
+            {children}
+        </Header>
         {/*<AppModal*/}
         {/*    setModalVisible={() => setModal(false)}*/}
         {/*    modalVisible={modal}*/}
@@ -165,10 +167,10 @@ function ContentWrapper({history, children}) {
         {/*    <AppButton onClick={() => {}}>Войти</AppButton>*/}
         {/*</AppModal>*/}
         {/*<div className={styles.content}>*/}
-            {children}
+        {/*    {children}*/}
             {/*{typeof children === 'function' ? RequestWrapper((p) => children({...p})) : children}*/}
         {/*</div>*/}
-        <Header onClick={ChangePage}/>
+        {/*<Header onClick={ChangePage}/>*/}
         <div className={styles.request_error_block}>
             {ERRORS.filter((e, i) => i < 3)
                 .map((error, i) => <ErrorMessage error={error} key={i}/>)}

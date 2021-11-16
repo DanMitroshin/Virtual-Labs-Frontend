@@ -71,5 +71,15 @@
   font-family: 'PT Sans', sans-serif;
   //color: $BLUE_500;
   top: -24px;
-  left: 16px;
+  left: 10px;
+}
+
+.labelError {
+  position: absolute;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: 'PT Sans', sans-serif;
+  //color: $BLUE_500;
+  bottom: -24px;
+  left: 10px;
 }

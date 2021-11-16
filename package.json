@@ -24,7 +24,7 @@
     "remark-math": "^5.1.1"
   },
   "scripts": {
-    "start": "react-scripts start --max-old-space-size=4096",
+    "start": "react-scripts --max-old-space-size=4096 start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",

@@ -1,0 +1,46 @@
+@import "../../../assets/colors";
+
+.mainDiv {
+  //background-color: #58FFB8;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.taskName {
+  margin-top: 20px;
+}
+
+
+// ####################################
+
+.ldsDualRing {
+  display: inline-block;
+  width: 80px*2;
+  height: 80px*2;
+  //background-color: #58FFB8;
+}
+
+.ldsDualRing:after {
+  content: " ";
+  display: block;
+  width: 68px*2;
+  height: 68px*2;
+  //margin: 5px;
+  border-radius: 50%;
+  //border: 6px solid #fff;
+  border-width: 6px*2;
+  border-style: solid;
+  border-color: $BLUE_500 transparent $BLUE_500 transparent;
+  animation: ldsDualRing 1.0s linear infinite;
+}
+
+@keyframes ldsDualRing {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

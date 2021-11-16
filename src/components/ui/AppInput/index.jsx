@@ -8,6 +8,7 @@ function AppInput(
         placeholder = "",
         value = "",
         setValue = () => {},
+        onChangeValue = undefined,
         onFocus = () => {},
         onBlur = () => {},
         maxLength = 60,
@@ -15,7 +16,16 @@ function AppInput(
         type = "text",
         editable = true,
         ...props}) {
-    const onChange = editable ? setValue : (e) => {}
+    // const onChange = editable ? setValue : (e) => {}
+    const onChange = (v) => {
+        if (!editable) {
+            return;
+        }
+        if (typeof onChangeValue === 'function') {
+            onChangeValue()
+        }
+        setValue(v)
+    }
 
     const [active, setActive] = useState(false);
 
@@ -47,7 +57,7 @@ function AppInput(
                }}
                {...props}
         />
-        <label className={cn(styles.label, styles.error)}>
+        <label className={cn(styles.labelError, styles.error)}>
             {error}
         </label>
     </div>;

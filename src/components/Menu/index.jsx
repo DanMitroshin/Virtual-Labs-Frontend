@@ -33,10 +33,11 @@ const Burger = ({open, setOpen}) => {
     )
 }
 
-const SlideBar = ({
-                      onClick = () => {
-                      }
-                  }) => {
+const SlideBar = (
+    {
+        onClick = () => {
+        }
+    }) => {
 
     const onChoose = useCallback((name) => {
         return () => onClick(name)
@@ -57,7 +58,7 @@ const SlideBar = ({
 }
 
 
-function Header({onClick}) {
+function Header({onClick, children}) {
 
     const [open, setOpen] = useState(false);
     const onOpen = () => {
@@ -68,40 +69,29 @@ function Header({onClick}) {
         onClick(name);
     }, [onClick])
 
-    // return
-    // <Sidebar
-    //     sidebar={<SlideBar onClick={onChoose}/>}
-    //     open={open}
-    //     onSetOpen={onOpen}
-    //     // overlayClassName={styles.overlay}
-    //     styles={{
-    //         sidebar: {
-    //             background: "white",
-    //             position: "fixed",
-    //         },
-    //         overlay: {
-    //             zIndex: -1,
-    //             // position: "ab",
-    //             // top: 0,
-    //             // left: 0,
-    //             // right: 0,
-    //             // bottom: 0,
-    //             opacity: 0,
-    //             visibility: "hidden",
-    //             transition: "opacity .3s ease-out, visibility .3s ease-out",
-    //             transform: open ? "scale(1)" : "scale(0)",
-    //             backgroundColor: "rgba(0,0,0,.3)"
-    //         },
-    //     }}
-    // >
-    return <div className={styles.fixedMenu}>
-        <Burger open={open} setOpen={setOpen}/>
-        <div className={cn(styles.hiddenDiv, open && styles.notHidden)}>
+    return <Sidebar
+        sidebar={
             <SlideBar onClick={onChoose}/>
+        }
+        open={open}
+        onSetOpen={onOpen}
+        // overlayClassName={styles.overlay}
+        styles={{
+            sidebar: {
+                background: "white",
+                position: "fixed",
+            },
+        }}
+    >
+        <div className={styles.fixedMenu}>
+            <Burger open={open} setOpen={setOpen}/>
+            {/*    <div className={cn(styles.hiddenDiv, open && styles.notHidden)}>*/}
+            {/*        <SlideBar onClick={onChoose}/>*/}
+            {/*    </div>*/}
+            {/*<p className={styles.title}>Menu</p>*/}
         </div>
-        {/*<p className={styles.title}>Menu</p>*/}
-    </div>
-    // </Sidebar>
+        {children}
+    </Sidebar>
 }
 
 
