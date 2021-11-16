@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/virtual_lab/static/css/main.cbfae3b9.chunk.css",
+    "main.js": "/virtual_lab/static/js/main.4d78dc1f.chunk.js",
+    "main.js.map": "/virtual_lab/static/js/main.4d78dc1f.chunk.js.map",
+    "runtime-main.js": "/virtual_lab/static/js/runtime-main.7ae08d33.js",
+    "runtime-main.js.map": "/virtual_lab/static/js/runtime-main.7ae08d33.js.map",
+    "static/js/2.e900e37e.chunk.js": "/virtual_lab/static/js/2.e900e37e.chunk.js",
+    "static/js/2.e900e37e.chunk.js.map": "/virtual_lab/static/js/2.e900e37e.chunk.js.map",
+    "index.html": "/virtual_lab/index.html",
+    "precache-manifest.d4738724a73b56e996e78c0b2add7833.js": "/virtual_lab/precache-manifest.d4738724a73b56e996e78c0b2add7833.js",
+    "service-worker.js": "/virtual_lab/service-worker.js",
+    "static/css/main.cbfae3b9.chunk.css.map": "/virtual_lab/static/css/main.cbfae3b9.chunk.css.map",
+    "static/js/2.e900e37e.chunk.js.LICENSE.txt": "/virtual_lab/static/js/2.e900e37e.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/virtual_lab/static/media/Circe-Thin.d9851189.eot"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.7ae08d33.js",
+    "static/js/2.e900e37e.chunk.js",
+    "static/css/main.cbfae3b9.chunk.css",
+    "static/js/main.4d78dc1f.chunk.js"
+  ]
+}
