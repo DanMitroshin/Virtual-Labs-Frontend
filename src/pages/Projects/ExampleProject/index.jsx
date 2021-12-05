@@ -8,6 +8,7 @@ import Plot from 'react-plotly.js';
 import {THEME} from "../../../constants/THEME";
 import AppActivityIndicator from "../../../components/ui/AppActivityIndicator";
 import AppBoxInput from "../../../components/ui/AppBoxInput";
+import AppRangeStepInput from "../../../components/ui/AppRangeStepInput";
 
 const title = "Гипотеза Коллатца"
 const description = "Для объяснения сути гипотезы рассмотрим следующую последовательность чисел, называемую сираку́зской после́довательностью. Берём любое натуральное число n. Если оно чётное, то делим его на 2, а если нечётное, то умножаем на 3 и прибавляем 1 (получаем $3n + 1$). Над полученным числом выполняем те же самые действия, и так далее.\n" +
@@ -27,6 +28,8 @@ function ExampleProject() {
 
     const [useLoading, setUseLoading] = useState(true);
     const [loading, setLoading] = useState(false);
+
+    const [rangeValue, setRangeValue] = useState(90)
 
     const onCount = () => {
         if (loading) {
@@ -110,6 +113,9 @@ function ExampleProject() {
         ]}>
             {description}
         </ReactMarkdown>
+        <AppRangeStepInput value={rangeValue}
+                           setValue={setRangeValue}
+        />
         <div className={styles.inputDiv}>
             <AppInput label={"Число"}
                       placeholder={"Введите число..."}

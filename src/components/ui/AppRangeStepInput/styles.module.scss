@@ -1,0 +1,92 @@
+@import "../../../assets/colors";
+
+.main {
+  background-color: $BLUE_500;
+  //color: $RED_500;
+  width: 100%;
+  cursor: pointer;
+  margin: 0 10px;
+
+  //-webkit-appearance: none;
+  //appearance: none;
+  //height: 8px;
+  //opacity: 1;
+  //outline: none;
+
+  //margin: 0 auto;
+}
+
+.valueDiv {
+  width: 100%;
+  //margin-bottom: 6px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  p {
+    background-color: white;
+    color: $BLUE_500;
+    font-weight: bold;
+    padding: 5px 16px;
+
+    border-radius: 10px;
+    border-width: 2px;
+    border-color: $BLUE_500;
+    border-style: solid;
+  }
+}
+
+.borderValue {
+  color: $BLUE_500;
+  font-weight: bold;
+  text-align: center;
+  //height: 100%;
+  //vertical-align: center;
+  //background-color: #AD009F;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  //background-color: #58FFB8;
+}
+
+.inputWrapper {
+  display: flex;
+  //align-self: flex-end;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+  //background-color: #ffd058;
+  //height: 100px;
+}
+
+.borderValueDiv {
+  height: 100%;
+  display: flex;
+  //flex: 1;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-left: 8px;
+  margin-right: 8px;
+  //background-color: #e26163;
+}
+
+.inputR {
+
+}
+
+.main::-webkit-slider-thumb {
+  appearance: none;
+  -webkit-appearance: none;
+  background: $BLUE_500;
+  height: 75px;
+  width: 15px;
+  border-radius: 50%;
+}
