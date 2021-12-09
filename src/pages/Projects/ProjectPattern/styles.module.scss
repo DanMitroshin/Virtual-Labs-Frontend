@@ -1,0 +1,94 @@
+@import "../../../assets/colors";
+
+.mainDiv {
+  padding-top: 3rem;
+  padding-left: 6rem;
+  padding-right: 6rem;
+
+  background: linear-gradient($BLUE_100, #FFFFFF);
+  //min-height: 100%;
+  min-height: 100vh;
+}
+
+@media (max-width: 600px) {
+  .mainDiv {
+    //padding-top: 2rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+}
+
+.title {
+  font-size: 40px;
+  text-align: center;
+}
+
+.inputDiv {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: flex-start;
+
+  button {
+    margin-left: 30px;
+  }
+  //:nth-child(2) {
+  //  margin-left: 30px;
+  //}
+}
+
+
+.plotWrapper {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  //background-color: #58FFB8;
+}
+
+// ####################################
+
+.boxDiv {
+  margin-bottom: 20px;
+  margin-top: 30px;
+}
+
+.headerWrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 10px;
+  margin-top: 8px;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-bottom-color: $BLUE_500;
+  padding-bottom: 10px;
+}
+
+.headerPoint {
+  cursor: pointer;
+  padding: 10px 25px 10px 25px;
+  background-color: white;
+  margin-right: 10px;
+  border-radius: 10px;
+  border: solid 2px $BLUE_200;
+  transition: border 0.15s, background-color 0.15s;
+  &:hover {
+    border: solid 2px $BLUE_500;
+    background-color: $BLUE_100;
+  }
+  h4 {
+    margin: 0;
+    padding: 0;
+    //line-height: 0;
+  }
+}
+
+.activeHeaderPoint {
+  border: solid 2px $BLUE_500;
+  background-color: $BLUE_100;
+}

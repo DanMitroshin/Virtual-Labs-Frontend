@@ -9,12 +9,68 @@ import {THEME} from "../../../constants/THEME";
 import AppActivityIndicator from "../../../components/ui/AppActivityIndicator";
 import AppBoxInput from "../../../components/ui/AppBoxInput";
 import AppRangeStepInput from "../../../components/ui/AppRangeStepInput";
+import ProjectPattern from "../ProjectPattern";
 
 const title = "Гипотеза Коллатца"
 const description = "Для объяснения сути гипотезы рассмотрим следующую последовательность чисел, называемую сираку́зской после́довательностью. Берём любое натуральное число n. Если оно чётное, то делим его на 2, а если нечётное, то умножаем на 3 и прибавляем 1 (получаем $3n + 1$). Над полученным числом выполняем те же самые действия, и так далее.\n" +
     "\n" +
     "Гипотеза Коллатца заключается в том, что какое бы начальное число $n$ мы ни взяли, рано или поздно мы получим единицу\n" +
     "Эта гипотеза **считается самой простой нерешнной задачей**."
+
+const project = {
+    name: "example",
+    request: "dummy",
+    parameters: [
+        {
+            type: 'positive',
+            name: 'r_left',
+            label: 'Плотность (положительное число) в левой половине области',
+            example: 1.0,
+        },
+        {
+            type: 'positive',
+            name: 'r_right',
+            label: 'Плотность (положительное число) в правой половине области',
+            example: 0.125,
+        },
+        {
+            type: 'number',
+            name: 'u_left',
+            label: 'Скорость в левой половине области',
+            example: 0.0,
+        },
+        {
+            type: 'number',
+            name: 'u_right',
+            label: 'Скорость в правой половине области',
+            example: 0.0,
+        },
+        {
+            type: 'positive',
+            name: 'p_left',
+            label: 'Давление в левой половине области',
+            example: 1.0,
+        },
+        {
+            type: 'positive',
+            name: 'p_right',
+            label: 'Давление в правой половине области',
+            example: 0.1,
+        },
+        {
+            type: 'positive',
+            name: 't_end',
+            label: 'Время расчета',
+            example: 0.2,
+        },
+        {
+            type: 'positive',
+            name: 'cfl',
+            label: 'число Куранта-Фридрихса-Леви (CFL)',
+            example: 0.1,
+        },
+    ]
+}
 
 const width = window.innerWidth;
 
@@ -105,6 +161,10 @@ function ExampleProject() {
 
     // ############
 
+    return <ProjectPattern title={title}
+                           description={description}
+                           project={project}
+    />
 
     return <div className={styles.mainDiv}>
         <h3>{title}</h3>

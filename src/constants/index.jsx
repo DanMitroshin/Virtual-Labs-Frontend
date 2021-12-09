@@ -22,7 +22,7 @@ export const MAIN_URL = {
 };
 
 export const DB_URL = {
-    URL: "http://fs-project-0.herokuapp.com", //"http://localhost:8080",
+    URL: "http://127.0.0.1:5000", //"http://localhost:8080",
     USERS: "users"
 };
 

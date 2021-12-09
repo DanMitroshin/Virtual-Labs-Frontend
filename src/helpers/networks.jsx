@@ -25,7 +25,9 @@ const TimeoutPromise = ({ms = 10000, promise}) => {
 export const httpGet = async ({request, token = "", ms = 10000}) => {
     try {
         let headers = {
-            "Content-Type": "application/json"
+            "Content-Type": "application/json",
+            "Access-Control-Allow-Headers": "*",
+            'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
         };
         if (token) {
             headers = {
@@ -33,10 +35,13 @@ export const httpGet = async ({request, token = "", ms = 10000}) => {
                 "Content-Type": "application/json"
             }
         }
-        const response = await TimeoutPromise({ms, promise: fetch(`${DB_URL}/${request}`, {
-                method: 'GET',
-                headers: headers
-            })});
+        const response = await TimeoutPromise({
+            ms, promise: fetch(
+                `${DB_URL.URL}/${request}`, {
+                    method: 'GET',
+                    headers: headers
+                })
+        });
         if (response.ok) {
             //console.log("GET OK", response);
             const json = await response.json();
@@ -62,7 +67,7 @@ export const httpGet = async ({request, token = "", ms = 10000}) => {
             } catch (e) {
                 json = {}
             }
-            return {json: json, message: message, status: response.status, type: 1}
+            return {json: json, response, message: message, status: response.status, type: 1}
         }
     } catch (err) {
         console.warn('httpGet error ', err);
@@ -73,19 +78,29 @@ export const httpGet = async ({request, token = "", ms = 10000}) => {
 export const httpPost = async ({request, token = "", body, ms = 10000}) => {
     try {
         let headers = {
-            "Content-Type": "application/json"
+            "Content-Type": "application/json",
+            "Access-Control-Allow-Headers": "*",
+            'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
+            // "Mime-Type": "application/json",
         };
         if (token.length > 0) {
-            headers = {
-                'Authorization': 'Token ' + token,
-                "Content-Type": "application/json"
-            }
+            headers['Authorization'] = 'Token ' + token;
         }
-        const response = await TimeoutPromise({ms, promise: fetch(`${DB_URL}/${request}`, {
-                method: 'POST',
-                headers: headers,
-                body: JSON.stringify(body)
-            })});
+        // const response = await TimeoutPromise({
+        //     ms, promise: fetch(`${DB_URL.URL}/${request}`, {
+        //         method: 'POST',
+        //         headers: headers,
+        //         mode: 'no-cors',
+        //         body: JSON.stringify(body)
+        //     })
+        // });
+
+        const response = await fetch(`${DB_URL.URL}/${request}`, {
+            method: 'POST',
+            headers: headers,
+            //mode: 'no-cors',
+            body: JSON.stringify(body)
+        });
         if (response.ok) {
             //console.log("POST OK", response);
             const json = await response.json();
@@ -112,10 +127,14 @@ export const httpPost = async ({request, token = "", body, ms = 10000}) => {
             } catch (e) {
                 json = {}
             }
-            return {json: json, message: message, status: response.status, type: 1}
+            return {
+                json: json,
+                //response,
+                request: `/${request}`, message: message, status: response.status, type: 1
+            }
         }
     } catch (err) {
         console.warn('httpPost error ', err);
-        return {json: {}, message: err.toString(), status: 0, type: 2}
+        return {json: {}, request: `/${request}`, message: err.toString(), status: 0, type: 2}
     }
 };
