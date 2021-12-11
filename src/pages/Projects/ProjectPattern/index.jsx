@@ -2,8 +2,11 @@ import React, {useCallback, useEffect, useLayoutEffect, useRef, useState} from '
 import styles from "./styles.module.scss";
 import ReactMarkdown from "react-markdown";
 import RemarkMathPlugin from 'remark-math';
+import rehypeKatex from 'rehype-katex';
+// import gfm from 'remark-gfm'
 import cn from 'classnames';
 import SolverPattern from "./SolverPattern";
+import 'katex/dist/katex.min.css'
 
 const width = window.innerWidth;
 
@@ -25,31 +28,17 @@ function ProjectPattern(
 
     const [headerState, setHeaderState] = useState(1);
 
-    useLayoutEffect(() => {
-
-    }, [])
-
-    const [number, setNumber] = useState(10);
-    const [error, setError] = useState("")
-
-    const [nodes, setNodes] = useState([])
-
-    const [loading, setLoading] = useState(false);
-
-    const [rangeValue, setRangeValue] = useState(90)
-
-
-    const myRef = useRef(null)
-
-    const executeScroll = () => myRef.current.scrollIntoView({behavior: 'smooth'})
-
-    const onClearError = useCallback(() => setError(""), [setError])
-
-
     return <div className={styles.mainDiv}>
-        <h3>
-            {title}
-        </h3>
+        <ReactMarkdown
+                plugins={[
+                    RemarkMathPlugin,
+                    // rehypeKatex,
+                ]}
+                rehypePlugins={[rehypeKatex]}
+                // children={`The lift coefficient ($C_L$) is a dimensionless coefficient.`}
+            >
+                {title}
+            </ReactMarkdown>
         <div className={styles.headerWrapper}>
             {
                 headerArray.map(({name}, index) => (
@@ -66,12 +55,18 @@ function ProjectPattern(
             }
         </div>
         {headerState === 0 ?
-            <ReactMarkdown plugins={[
-                RemarkMathPlugin
-            ]}>
+            <ReactMarkdown
+                plugins={[
+                    RemarkMathPlugin,
+                    // rehypeKatex,
+                ]}
+                rehypePlugins={[rehypeKatex]}
+                // children={`The lift coefficient ($C_L$) is a dimensionless coefficient.`}
+            >
                 {description}
-            </ReactMarkdown> :
-            <SolverPattern project={project} />}
+            </ReactMarkdown>
+            :
+            <SolverPattern project={project}/>}
     </div>
 }
 

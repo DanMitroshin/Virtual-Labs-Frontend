@@ -27,6 +27,7 @@ function AppInput(
     {
         label= "",
         placeholder = "",
+        isArray = "",
         value = "",
         setValue = () => {},
         from = undefined,

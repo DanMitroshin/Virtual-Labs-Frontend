@@ -7,9 +7,20 @@
   justify-content: flex-start;
   align-items: flex-start;
 
-  margin-top: 30px;
-  min-width: 120px;
-  max-width: 90vw;
+  margin-top: 15px;
+  padding-top: 16px;
+  padding-bottom: 10px;
+  padding-left: 14px;
+  border-left: solid 4px $BLUE_500;
+  //min-width: 330px;
+  //max-width: 500px;
+}
+
+.title {
+  //margin: 20px 10px;
+  color: $BLUE_500;
+  margin: 0;
+  padding: 0;
 }
 
 .input {
@@ -53,49 +64,58 @@
   cursor: default;
 }
 
-.field_input {
+.inputWrapper {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  max-width: 85vw;
+
+  //width: 100%;
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+
+.arrayButton {
+  cursor: pointer;
+
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  position: relative;
 
   border-radius: 10px;
+  font-weight: bold;
+  font-size: 32px;
 
   //margin-top: 30px;
   //min-width: 80px;
   //max-width: 500px;
-  width: 100%;
-  margin-top: 4px;
-  min-height: 40px;
-  border-width: 2px;
+  //width: 100%;
+  //margin-top: 4px;
+  height: 42px;
+  width: 42px;
+  border-width: 4px;
   border-style: solid;
-  //border-color: $BLUE_500;
-  padding: 3px 10px;
-  transition-duration: 0.3s;
-  transition-property: all;
+  //padding: 3px 10px;
+  //transition-duration: 0.3s;
+  //transition-property: all;
   background-color: white;
+
+  margin-right: 14px;
 }
 
-.label {
-  //position: absolute;
-  font-size: 16px;
-  font-weight: bold;
-  font-family: 'PT Sans', sans-serif;
-  text-align: left;
-  padding-left: 6px;
-  //color: $BLUE_500;
-
-  //top: -24px;
-  //left: 10px;
+@media (max-width: 600px) {
+  .arrayButton {
+    margin-right: 4px;
+  }
 }
 
-.labelError {
-  position: absolute;
-  font-size: 16px;
-  font-weight: bold;
-  font-family: 'PT Sans', sans-serif;
-  //color: $BLUE_500;
-  bottom: -24px;
-  left: 10px;
+.addButton {
+  color: $BLUE_500;
+  border-color: $BLUE_500;
+}
+
+.removeButton {
+  color: $RED_500;
+  border-color: $RED_500;
 }

@@ -1,12 +1,12 @@
 import React, {useEffect, useState, useRef} from 'react';
 
 import RequestWrapper from "../../helpers/RequestWrapper";
-import {AppActivityIndicator} from "../ui/AppActivityIndicator";
+import AppActivityIndicator from "../ui/AppActivityIndicator";
 import AppButton from "../ui/AppButton";
+import styles from "./styles.module.scss";
 import {THEME} from "../../constants/THEME";
 // import NetInfo from "@react-native-community/netinfo";
 // import { Ionicons } from '@expo/vector-icons';
-import {AppTextWithoutTags} from "../ui/AppText/AppTextWithoutTags";
 
 const RequestView = (
     {
@@ -71,19 +71,19 @@ const RequestView = (
 
                         if (connectState.isConnected) {
                             setError(
-                                "На сервере ведутся ремонтные работы\n\n" +
-                                "Приносим извинения за доставленные неудобства, скоро всё будет работать:)\n" +
-                                "Попробуй еще раз через пару минут"
+                                "На сервере ведутся ремонтные работы. " +
+                                "Приносим извинения за доставленные неудобства, скоро всё будет работать!\n" +
+                                "Попробуйте еще раз через пару минут"
                             )
                         } else {
                             setError(
-                                "Проверь подключение к интернету и попробуй еще раз"
+                                "Проверьте подключение к интернету и попробуйте еще раз"
                             )
                         }
                         // });
                     } catch (e) {
                         setError(
-                            "Проверь подключение к интернету и попробуй еще раз"
+                            "Проверьте подключение к интернету и попробуйте еще раз"
                         )
                     }
                 } else if (Math.round(result.status / 100) === 5) {
@@ -116,24 +116,18 @@ const RequestView = (
     }, [request, needDoRequest])
 
 
-    if (error) {
-        return <div style={styles.screen}>
-            {/*{typeof onClose === 'function' &&*/}
-            {/*<TouchableOpacity*/}
-            {/*    style={styles.onClose}*/}
-            {/*    onPress={onClose}>*/}
-            {/*    <Ionicons name="close-circle" size={48} color={THEME.RED_500} />*/}
-            {/*</TouchableOpacity>}*/}
-            <AppTextWithoutTags style={styles.errorText}>
+    if (error && needDoRequest) {
+        return <div className={styles.screen}>
+            <p className={styles.errorText}>
                 {error}
-            </AppTextWithoutTags>
-            <AppButton onPress={() => doRequest(request)}>
+            </p>
+            <AppButton onClick={() => doRequest(request)}>
                 Повторить
             </AppButton>
         </div>
     }
     if (loading) {
-        return <div style={styles.screen}>
+        return <div className={styles.screen}>
             <AppActivityIndicator/>
         </div>
     }
@@ -142,26 +136,5 @@ const RequestView = (
 
 }
 
-const styles = StyleSheet.create({
-    screen: {
-        flex: 1,
-        width: '100%',
-        // backgroundColor: "red",
-        justifyContent: "center",
-        alignItems: "center",
-    },
-    errorText: {
-        fontFamily: THEME.MAIN_FONT_BOLD,
-        marginBottom: 10,
-        paddingHorizontal: 20,
-        width: '100%',
-        textAlign: 'center',
-    },
-    onClose: {
-        position: 'absolute',
-        top: 20,
-        left: 20,
-    },
-});
 
 export default RequestView;
