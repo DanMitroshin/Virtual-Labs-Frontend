@@ -6,30 +6,30 @@ import {MAIN_URL} from "../../constants";
 
 const projects = [
     {
-        title: "Проект №1",
+        title: "Метод для определения ламинарно-турбулентного перехода",
         description: "Это краткое описание проекта, в котором разъяснено, в чем суть проекта и для чего он нужен",
-        name: MAIN_URL.PROJECTS_LIST.EXAMPLE,
+        name: MAIN_URL.PROJECTS_LIST.EN_LST_SOLVER,
     },
     {
-        title: "Проект №2",
-        description: "Это краткое описание проекта #2, в котором разъяснено, в чем суть проекта и для чего он нужен",
-        name: MAIN_URL.PROJECTS_LIST.EXAMPLE,
+        title: "Решатель систем ОДУ методом CROS",
+        description: "Решатель систем ОДУ методом CROS",
+        name: MAIN_URL.PROJECTS_LIST.CROS_SOLVER,
     },
     {
-        title: "Проект №3",
+        title: "Газовая динамика",
         description: "Это краткое описание проекта #3, в котором разъяснено, в чем суть проекта и для чего он нужен",
-        name: MAIN_URL.PROJECTS_LIST.EXAMPLE,
+        name: MAIN_URL.PROJECTS_LIST.GAS_DYNAMICS,
     },
-    {
-        title: "Проект №4",
-        description: "Это краткое описание проекта #4, в котором разъяснено, в чем суть проекта и для чего он нужен",
-        name: MAIN_URL.PROJECTS_LIST.EXAMPLE,
-    },
-    {
-        title: "Проект №5",
-        description: "Это краткое описание проекта #5, в котором разъяснено, в чем суть проекта и для чего он нужен",
-        name: MAIN_URL.PROJECTS_LIST.EXAMPLE,
-    },
+    // {
+    //     title: "Проект №4",
+    //     description: "Это краткое описание проекта #4, в котором разъяснено, в чем суть проекта и для чего он нужен",
+    //     name: MAIN_URL.PROJECTS_LIST.EXAMPLE,
+    // },
+    // {
+    //     title: "Проект №5",
+    //     description: "Это краткое описание проекта #5, в котором разъяснено, в чем суть проекта и для чего он нужен",
+    //     name: MAIN_URL.PROJECTS_LIST.EXAMPLE,
+    // },
 
 ]
 

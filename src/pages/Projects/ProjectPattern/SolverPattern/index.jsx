@@ -257,6 +257,7 @@ function SolverPattern(
             <RequestView loading={loading}
                          request={request}
                          needDoRequest={loading}
+                         // processName={task}
                          onRequest={onRequest}>
                 {
                     // loading ? <AppActivityIndicator processName={task}/> :

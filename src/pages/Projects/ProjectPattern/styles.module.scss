@@ -92,3 +92,13 @@
   border: solid 2px $BLUE_500;
   background-color: $BLUE_100;
 }
+
+.refContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 14px;
+  padding-bottom: 30px;
+}

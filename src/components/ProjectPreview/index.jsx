@@ -17,7 +17,7 @@ function ProjectPreview(
     return <div className={styles.mainDiv}>
         <div className={styles.infoDiv}>
             <h3>{title}</h3>
-            <p>{description}</p>
+            {/*<p>{description}</p>*/}
         </div>
         <div className={styles.buttonDiv}>
             <AppButton onClick={onChoose}>
