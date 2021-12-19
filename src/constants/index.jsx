@@ -20,7 +20,8 @@ export const MAIN_URL = {
         EXAMPLE: PROJECTS + "/example",
         CROS_SOLVER: PROJECTS + "/cros_solver",
         EN_LST_SOLVER: PROJECTS + "/en_lst_solver",
-        GAS_DYNAMICS: PROJECTS + "/gas_dynamics_1d"
+        GAS_DYNAMICS: PROJECTS + "/gas_dynamics_1d",
+        HPL_SOLVER: PROJECTS + "/hpl_solver",
     }
 };
 

@@ -9,6 +9,7 @@ import RequestWrapper from "../../../../helpers/RequestWrapper";
 import RequestView from "../../../../components/RequestView";
 import cn from "classnames";
 import ArrayAppInput from "../../../../components/ui/ArrayAppInput";
+import {THEME} from "../../../../constants/THEME";
 
 const width = window.innerWidth;
 
@@ -18,6 +19,7 @@ const INPUT_TYPES = {
     STEP: 'step',
     BOOL: 'bool',
     TEXT: 'text',
+    STRING: 'string',
 }
 
 const GetInputComponent = (item, index, setValue) => {
@@ -87,8 +89,8 @@ function SolverPattern(
         //     }
         //     projectState[index].error[info.index] = info.error;
         // } else {
-            projectState[index].value = value;
-            projectState[index].error = info.error;
+        projectState[index].value = value;
+        projectState[index].error = info.error;
         // }
         // console.log("NEW PS", projectState)
         setProjectState(
@@ -191,9 +193,16 @@ function SolverPattern(
         return () => clearTimeout(timeout)
     }, [CheckValues, executeScroll])
 
+    const [figures, setFigures] = useState([])
+
     const onRequest = (res) => {
 
-        setNodes(res.json.nodes)
+        // setNodes(res.json.nodes)
+
+        if (res.json.figures) {
+            setFigures(res.json.figures)
+        }
+
         // setLoading(true)
         // const req = `solver/${solverHeader[0].request}`
         // console.log("LOG SOLVER", request)
@@ -257,12 +266,41 @@ function SolverPattern(
             <RequestView loading={loading}
                          request={request}
                          needDoRequest={loading}
-                         // processName={task}
+                // processName={task}
                          onRequest={onRequest}>
                 {
                     // loading ? <AppActivityIndicator processName={task}/> :
-                    (nodes.length > 0 &&
-                        <div>{nodes.toString()}</div>
+                    (
+                        // nodes.length > 0 &&
+                        // <div>{nodes.toString()}</div>
+                        figures.length > 0 && figures.map((figure, index) => (
+                            <Plot
+                                key={index.toString()}
+                                layout={{
+                                    // width: width * 0.8,
+                                    borderStyle: "solid",
+                                    borderWidth: 1,
+                                    title: 'Plot with numbers',
+                                    plot_bgcolor: THEME.BLUE_100,
+                                    // paper_bgcolor: THEME.BLUE_200,
+                                    // border_color: THEME.GREEN_500,
+                                    useResizeHandler: true,
+                                    autosize: true,
+                                }}
+                                useResizeHandler={true}
+                                style={{
+                                    borderWidth: 2,
+                                    borderStyle: "solid",
+                                    borderColor: THEME.BLUE_500,
+                                    width: "100%",
+                                    height: "100%",
+                                    // background: THEME.BLUE_200,
+                                    // padding: 100
+                                }}
+                                config={{scrollZoom: true}}
+                                {...figure}
+                            />
+                        ))
                         // <Plot
                         //     data={[
                         //         {

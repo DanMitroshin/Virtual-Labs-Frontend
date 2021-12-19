@@ -20,6 +20,11 @@ const projects = [
         description: "Это краткое описание проекта #3, в котором разъяснено, в чем суть проекта и для чего он нужен",
         name: MAIN_URL.PROJECTS_LIST.GAS_DYNAMICS,
     },
+    {
+        title: "Beeler-Reuter",
+        description: "Это краткое описание проекта #3, в котором разъяснено, в чем суть проекта и для чего он нужен",
+        name: MAIN_URL.PROJECTS_LIST.HPL_SOLVER,
+    },
     // {
     //     title: "Проект №4",
     //     description: "Это краткое описание проекта #4, в котором разъяснено, в чем суть проекта и для чего он нужен",

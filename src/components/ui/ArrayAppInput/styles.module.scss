@@ -119,3 +119,9 @@
   color: $RED_500;
   border-color: $RED_500;
 }
+
+.inactiveButton {
+  color: $GRAY_300;
+  border-color: $GRAY_300;
+  cursor: default;
+}

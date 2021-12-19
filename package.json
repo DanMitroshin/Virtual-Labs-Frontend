@@ -23,7 +23,8 @@
     "react-sidebar": "^3.0.2",
     "redux-thunk": "^2.3.0",
     "rehype-katex": "^6.0.2",
-    "remark-math": "^5.1.1"
+    "remark-math": "^5.1.1",
+    "remark-gfm": "^3.0.1"
   },
   "scripts": {
     "start": "react-scripts --max-old-space-size=4096 start",

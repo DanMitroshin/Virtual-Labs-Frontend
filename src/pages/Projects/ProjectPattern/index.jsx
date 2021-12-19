@@ -4,6 +4,7 @@ import ReactMarkdown from "react-markdown";
 import RemarkMathPlugin from 'remark-math';
 import rehypeKatex from 'rehype-katex';
 // import gfm from 'remark-gfm'
+import remarkGfm from 'remark-gfm'
 import cn from 'classnames';
 import SolverPattern from "./SolverPattern";
 import 'katex/dist/katex.min.css'
@@ -62,7 +63,8 @@ function ProjectPattern(
                     RemarkMathPlugin,
                     // rehypeKatex,
                 ]}
-                rehypePlugins={[rehypeKatex]}
+                rehypePlugins={[rehypeKatex, remarkGfm]}
+                // remarkPlugins={[remarkGfm]}
                 // children={`The lift coefficient ($C_L$) is a dimensionless coefficient.`}
             >
                 {description}

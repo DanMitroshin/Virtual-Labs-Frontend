@@ -21,7 +21,12 @@ function ArrayAppInput(
         setError(error)
     }, [error])
 
+    const checkMaxAmount = () => (typeof maxAmount === 'number' && maxAmount === value.length)
+
     const onAddItem = (index) => {
+        if (checkMaxAmount()) {
+            return
+        }
         const firstValues = value.slice(0, index + 1)
         const lastValues = value.slice(index + 1)
 
@@ -57,7 +62,12 @@ function ArrayAppInput(
 
         // let errors = value.map((_, index))
         setValue([...value], {error: err})
+
     }
+
+    // useEffect(() => {
+    //     console.log("LENGTH:", value.length)
+    // })
 
     return <div className={styles.container}>
         <h4 className={styles.title}>
@@ -71,12 +81,12 @@ function ArrayAppInput(
                  className={styles.inputWrapper}>
                 <div
                     onClick={() => onAddItem(index)}
-                    className={cn(styles.arrayButton, styles.addButton)}>
+                    className={cn(styles.arrayButton, styles.addButton, checkMaxAmount() && styles.inactiveButton)}>
                     +
                 </div>
                 <div
                     onClick={() => onRemoveItem(index)}
-                    className={cn(styles.arrayButton, styles.removeButton)}>
+                    className={cn(styles.arrayButton, styles.removeButton, (value.length === 1) && styles.inactiveButton)}>
                     X
                 </div>
             <AppInput
