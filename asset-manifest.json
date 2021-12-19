@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "/Virtual-Labs-Frontend/static/css/main.4e540655.chunk.css",
-    "main.js": "/Virtual-Labs-Frontend/static/js/main.4af4822e.chunk.js",
-    "main.js.map": "/Virtual-Labs-Frontend/static/js/main.4af4822e.chunk.js.map",
+    "main.css": "/Virtual-Labs-Frontend/static/css/main.dc9618a0.chunk.css",
+    "main.js": "/Virtual-Labs-Frontend/static/js/main.97e54bff.chunk.js",
+    "main.js.map": "/Virtual-Labs-Frontend/static/js/main.97e54bff.chunk.js.map",
     "runtime-main.js": "/Virtual-Labs-Frontend/static/js/runtime-main.17726735.js",
     "runtime-main.js.map": "/Virtual-Labs-Frontend/static/js/runtime-main.17726735.js.map",
     "static/css/2.dabe0257.chunk.css": "/Virtual-Labs-Frontend/static/css/2.dabe0257.chunk.css",
-    "static/js/2.166ee52f.chunk.js": "/Virtual-Labs-Frontend/static/js/2.166ee52f.chunk.js",
-    "static/js/2.166ee52f.chunk.js.map": "/Virtual-Labs-Frontend/static/js/2.166ee52f.chunk.js.map",
+    "static/js/2.a8da1a6d.chunk.js": "/Virtual-Labs-Frontend/static/js/2.a8da1a6d.chunk.js",
+    "static/js/2.a8da1a6d.chunk.js.map": "/Virtual-Labs-Frontend/static/js/2.a8da1a6d.chunk.js.map",
     "index.html": "/Virtual-Labs-Frontend/index.html",
-    "precache-manifest.97a65847d633a556387a90743b59c7f5.js": "/Virtual-Labs-Frontend/precache-manifest.97a65847d633a556387a90743b59c7f5.js",
+    "precache-manifest.979fc49eb30af8374714cfa733c4ff4b.js": "/Virtual-Labs-Frontend/precache-manifest.979fc49eb30af8374714cfa733c4ff4b.js",
     "service-worker.js": "/Virtual-Labs-Frontend/service-worker.js",
     "static/css/2.dabe0257.chunk.css.map": "/Virtual-Labs-Frontend/static/css/2.dabe0257.chunk.css.map",
-    "static/css/main.4e540655.chunk.css.map": "/Virtual-Labs-Frontend/static/css/main.4e540655.chunk.css.map",
-    "static/js/2.166ee52f.chunk.js.LICENSE.txt": "/Virtual-Labs-Frontend/static/js/2.166ee52f.chunk.js.LICENSE.txt",
+    "static/css/main.dc9618a0.chunk.css.map": "/Virtual-Labs-Frontend/static/css/main.dc9618a0.chunk.css.map",
+    "static/js/2.a8da1a6d.chunk.js.LICENSE.txt": "/Virtual-Labs-Frontend/static/js/2.a8da1a6d.chunk.js.LICENSE.txt",
     "static/media/index.css": "/Virtual-Labs-Frontend/static/media/Circe-Thin.d9851189.eot",
     "static/media/katex.min.css": "/Virtual-Labs-Frontend/static/media/KaTeX_Typewriter-Regular.b8b8393d.woff2"
   },
   "entrypoints": [
     "static/js/runtime-main.17726735.js",
     "static/css/2.dabe0257.chunk.css",
-    "static/js/2.166ee52f.chunk.js",
-    "static/css/main.4e540655.chunk.css",
-    "static/js/main.4af4822e.chunk.js"
+    "static/js/2.a8da1a6d.chunk.js",
+    "static/css/main.dc9618a0.chunk.css",
+    "static/js/main.97e54bff.chunk.js"
   ]
 }
